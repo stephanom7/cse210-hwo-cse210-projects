@@ -10,13 +10,14 @@ class Program
         int choice = 0;
         while (choice != 5)
         {
-            Console.WriteLine("Journal Menu:");
+            Console.WriteLine("\nJournal Menu:");
             Console.WriteLine("1. Write a new entry");
             Console.WriteLine("2. Display journal");
             Console.WriteLine("3. Save journal to file");
             Console.WriteLine("4. Load journal from file");
             Console.WriteLine("5. Quit");
             Console.Write("Choose an option: ");
+            
             choice = int.Parse(Console.ReadLine());
 
             if (choice == 1)

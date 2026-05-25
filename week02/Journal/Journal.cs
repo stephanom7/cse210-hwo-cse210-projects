@@ -28,21 +28,31 @@ public class Journal
                 outputFile.WriteLine($"{e._date}|{e._prompt}|{e._response}");
             }
         }
+        Console.WriteLine("Journal saved successfully!");
     }
 
     public void LoadFromFile(string filename)
     {
-        string[] lines = File.ReadAllLines(filename);
-        _entries.Clear();
-
-        foreach (string line in lines)
+        if (File.Exists(filename))
         {
-            string[] parts = line.Split('|');
-            Entry e = new Entry();
-            e._date = parts[0];
-            e._prompt = parts[1];
-            e._response = parts[2];
-            _entries.Add(e);
+            string[] lines = File.ReadAllLines(filename);
+            _entries.Clear();
+
+            foreach (string line in lines)
+            {
+                string[] parts = line.Split('|');
+                Entry e = new Entry();
+                e._date = parts[0];
+                e._prompt = parts[1];
+                e._response = parts[2];
+                _entries.Add(e);
+            }
+
+            Console.WriteLine("Journal loaded successfully!");
+        }
+        else
+        {
+            Console.WriteLine("File not found.");
         }
     }
 }
