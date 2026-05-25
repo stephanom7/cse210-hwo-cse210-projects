@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": ".NET Core Launch (console)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/cse210-hwo-cse210-projects/week01/Exercise1/bin/Debug/net8.0/Exercise1.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/cse210-hwo-cse210-projects/week01/Exercise1",
+            "stopAtEntry": false,
+            "console": "integratedTerminal"
+        }
+    ]
+}
